@@ -14,16 +14,15 @@ use App\Http\Controllers\TokenController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
-Route::group(array('middleware' => ['custom_auth']), function ()
+Route::prefix('v1')->group(function()
 {
-    Route::apiResource('token', TokenController::class);
-    Route::post('/token/topup', [TokenController::class, 'store']);
+    Route::get('/movie/genre', [App\Http\Controllers\API\MovieController::class, 'movieGenre']);
+    Route::get('/movie/timeslot', [App\Http\Controllers\API\MovieController::class, 'movieTimeslot']);
+    Route::get('/movie/performer', [App\Http\Controllers\API\MovieController::class, 'moviePerformer']);
+    Route::get('/movie/new', [App\Http\Controllers\API\MovieController::class, 'movieNew']);
+
+    Route::post('/movie/rating', [App\Http\Controllers\API\MovieController::class, 'movieRating']);
+    Route::post('/movie/add', [App\Http\Controllers\API\MovieController::class, 'movieAdd']);
 });
-
-
 
 
