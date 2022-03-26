@@ -1,0 +1,845 @@
+{
+	"info": {
+		"_postman_id": "dbd9ab3c-60c6-4bb8-87d1-2545cae769d3",
+		"name": "Movie API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Genre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/movie/genre?genre=comedy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"genre"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "comedy"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Genre",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movie/genre?genre=comedy",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"genre"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "comedy"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 14:25:31 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 14:25:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Genre\",\n    \"status\": true,\n    \"message\": \"Sucessfully fetch movies with genre comedy\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Spider-Man: No Way Home\",\n            \"description\": \"With Spider-Man identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to separate his normal life as Peter Parker.\",\n            \"mpaa_rating\": \"PG-13\",\n            \"user_id\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"languages\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"English\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 1,\n                        \"language_id\": 1\n                    }\n                }\n            ],\n            \"directors\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"Jon Watt\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 1,\n                        \"director_id\": 1\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Hantu Kak Limah\",\n            \"description\": \"Apabila Kak Limah meninggal dunia sebaik sahaja mengahwini lelaki yang lebih muda, rohnya menghantui penduduk kampung dan nampaknya sukar diusir.\",\n            \"mpaa_rating\": \"PG-13\",\n            \"user_id\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"languages\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"Malay\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 4,\n                        \"language_id\": 2\n                    }\n                }\n            ],\n            \"directors\": [\n                {\n                    \"id\": 4,\n                    \"name\": \"Mamat Khalid\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 4,\n                        \"director_id\": 4\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Train To Busan\",\n            \"description\": \"Seok-woo and his daughter are on a train to Busan on the latter birthday to see his wife.\",\n            \"mpaa_rating\": \"PG-13\",\n            \"user_id\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"languages\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"Korean\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"language_id\": 3\n                    }\n                }\n            ],\n            \"directors\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"Yeon Sang-Ho\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"director_id\": 5\n                    }\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Timeslot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/movie/timeslot?theater=GSC&time_start=2022-03-20 15:00:00&time_end=2022-03-20 17:00:00",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"timeslot"
+					],
+					"query": [
+						{
+							"key": "theater",
+							"value": "GSC"
+						},
+						{
+							"key": "time_start",
+							"value": "2022-03-20 15:00:00"
+						},
+						{
+							"key": "time_end",
+							"value": "2022-03-20 17:00:00"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Timeslot",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movie/timeslot?theater=GSC&time_start=2022-03-20 15:00:00&time_end=2022-03-20 17:00:00",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"timeslot"
+							],
+							"query": [
+								{
+									"key": "theater",
+									"value": "GSC"
+								},
+								{
+									"key": "time_start",
+									"value": "2022-03-20 15:00:00"
+								},
+								{
+									"key": "time_end",
+									"value": "2022-03-20 17:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 14:26:24 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 14:26:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Timeslot\",\n    \"status\": true,\n    \"message\": \"Sucessfully fetch movies with theater GSC with time start 2022-03-20 15:00:00 and time end 2022-03-20 17:00:00\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"title\": \"Train To Busan\",\n            \"description\": \"Seok-woo and his daughter are on a train to Busan on the latter birthday to see his wife.\",\n            \"mpaa_rating\": \"PG-13\",\n            \"user_id\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"languages\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"Korean\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"language_id\": 3\n                    }\n                }\n            ],\n            \"directors\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"Yeon Sang-Ho\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"director_id\": 5\n                    }\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Performer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/movie/performer?performer_name=Performer A",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"performer"
+					],
+					"query": [
+						{
+							"key": "performer_name",
+							"value": "Performer A"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Performer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movie/performer?performer_name=Performer A",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"performer"
+							],
+							"query": [
+								{
+									"key": "performer_name",
+									"value": "Performer A"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 14:27:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 14:27:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Search Performer\",\n    \"status\": true,\n    \"message\": \"Sucessfully fetch movies with performer name Performer A\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Spider-Man: No Way Home\",\n            \"description\": \"With Spider-Man identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to separate his normal life as Peter Parker.\",\n            \"mpaa_rating\": \"PG-13\",\n            \"user_id\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"languages\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"English\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 1,\n                        \"language_id\": 1\n                    }\n                }\n            ],\n            \"directors\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"Jon Watt\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 1,\n                        \"director_id\": 1\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Minions\",\n            \"description\": \"Minions Kevin, Stuart and Bob decide to find a new master.\",\n            \"mpaa_rating\": \"PG-13\",\n            \"user_id\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"languages\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"English\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 3,\n                        \"language_id\": 1\n                    }\n                }\n            ],\n            \"directors\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"Pierre Coffin\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 3,\n                        \"director_id\": 3\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Train To Busan\",\n            \"description\": \"Seok-woo and his daughter are on a train to Busan on the latter birthday to see his wife.\",\n            \"mpaa_rating\": \"PG-13\",\n            \"user_id\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"languages\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"Korean\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"language_id\": 3\n                    }\n                }\n            ],\n            \"directors\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"Yeon Sang-Ho\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"director_id\": 5\n                    }\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Give Rating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_title",
+							"value": "Spider",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Mr",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "r_description",
+							"value": "Fantastic!!",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/movie/rating",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"rating"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Give Rating",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "movie_title",
+									"value": "Spider",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Mr",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "r_description",
+									"value": "Fantastic!!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movie/rating",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"rating"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 12:56:03 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 12:56:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Give Rating\",\n    \"status\": true,\n    \"message\": \"Sucessfully rate the movie Spider-Man: No Way Home with rating 10 by user MrAs\",\n    \"data\": {\n        \"movie_id\": 1,\n        \"user_id\": 1,\n        \"rating\": \"10\",\n        \"description\": \"Fantastic!!\",\n        \"updated_at\": \"2022-03-25T12:56:03.000000Z\",\n        \"created_at\": \"2022-03-25T12:56:03.000000Z\",\n        \"id\": 3\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "New Movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/movie/new?r_date=2022-03-22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"new"
+					],
+					"query": [
+						{
+							"key": "r_date",
+							"value": "2022-03-22"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Movie",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movie/new?r_date=2022-03-22",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"new"
+							],
+							"query": [
+								{
+									"key": "r_date",
+									"value": "2022-03-22"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 13:46:07 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Mar 2022 13:46:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"New Movie\",\n    \"status\": true,\n    \"message\": \"Sucessfully fetch recently came out movies with date from 2022-03-22\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"time_start\": \"2022-03-20 15:00:00\",\n            \"time_end\": \"2022-03-20 17:00:00\",\n            \"date_from\": \"2022-03-22\",\n            \"date_to\": \"2022-04-20\",\n            \"movie_id\": 2,\n            \"theater_id\": 1,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"movie\": {\n                \"id\": 2,\n                \"title\": \"Transformers: The Last Knight\",\n                \"language\": \"English\",\n                \"director\": \"Micheal Bay\",\n                \"description\": \"Quintessa brainwashes Optimus Prime and heads to Earth to search for an ancient staff.\",\n                \"mpaa_rating\": \"PG-13\",\n                \"user_id\": null,\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        },\n        {\n            \"id\": 1,\n            \"time_start\": \"2022-03-20 15:00:00\",\n            \"time_end\": \"2022-03-20 17:00:00\",\n            \"date_from\": \"2022-03-21\",\n            \"date_to\": \"2022-04-20\",\n            \"movie_id\": 1,\n            \"theater_id\": 2,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"movie\": {\n                \"id\": 1,\n                \"title\": \"Spider-Man: No Way Home\",\n                \"language\": \"English\",\n                \"director\": \"Jon Watt\",\n                \"description\": \"With Spider-Man identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to separate his normal life as Peter Parker.\",\n                \"mpaa_rating\": \"PG-13\",\n                \"user_id\": null,\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        },\n        {\n            \"id\": 4,\n            \"time_start\": \"2022-03-20 15:00:00\",\n            \"time_end\": \"2022-03-20 17:00:00\",\n            \"date_from\": \"2022-03-20\",\n            \"date_to\": \"2022-04-20\",\n            \"movie_id\": 4,\n            \"theater_id\": 2,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"movie\": {\n                \"id\": 4,\n                \"title\": \"Hantu Kak Limah\",\n                \"language\": \"Malay\",\n                \"director\": \"Mamat Khalid\",\n                \"description\": \"Apabila Kak Limah meninggal dunia sebaik sahaja mengahwini lelaki yang lebih muda, rohnya menghantui penduduk kampung dan nampaknya sukar diusir.\",\n                \"mpaa_rating\": \"PG-13\",\n                \"user_id\": null,\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        },\n        {\n            \"id\": 6,\n            \"time_start\": \"2022-03-20 15:00:00\",\n            \"time_end\": \"2022-03-20 17:00:00\",\n            \"date_from\": \"2022-03-20\",\n            \"date_to\": \"2022-04-20\",\n            \"movie_id\": 5,\n            \"theater_id\": 3,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"movie\": {\n                \"id\": 5,\n                \"title\": \"Train To Busan\",\n                \"language\": \"Korean\",\n                \"director\": \"Yeon Sang-Ho\",\n                \"description\": \"Seok-woo and his daughter are on a train to Busan on the latter birthday to see his wife.\",\n                \"mpaa_rating\": \"PG-13\",\n                \"user_id\": null,\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "MrAs the Movies",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Work as Software Engineer",
+							"type": "text"
+						},
+						{
+							"key": "mpaa_rating",
+							"value": "PG-13",
+							"type": "text"
+						},
+						{
+							"key": "length",
+							"value": "90",
+							"type": "text"
+						},
+						{
+							"key": "realease",
+							"value": "2022-06-10",
+							"type": "text"
+						},
+						{
+							"key": "director[]",
+							"value": "Nabil",
+							"type": "text"
+						},
+						{
+							"key": "director[]",
+							"value": "Alep",
+							"type": "text"
+						},
+						{
+							"key": "language[]",
+							"value": "English",
+							"type": "text"
+						},
+						{
+							"key": "language[]",
+							"value": "Malay",
+							"type": "text"
+						},
+						{
+							"key": "performer[]",
+							"value": "MrAs",
+							"type": "text"
+						},
+						{
+							"key": "performer[]",
+							"value": "Aqil",
+							"type": "text"
+						},
+						{
+							"key": "genre[]",
+							"value": "Action",
+							"type": "text"
+						},
+						{
+							"key": "genre[]",
+							"value": "Thriller",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/movie/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"movie",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "MrAs the Movies",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Work as Software Engineer",
+									"type": "text"
+								},
+								{
+									"key": "mpaa_rating",
+									"value": "PG-13",
+									"type": "text"
+								},
+								{
+									"key": "length",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "realease",
+									"value": "2022-06-10",
+									"type": "text"
+								},
+								{
+									"key": "director[]",
+									"value": "Nabil",
+									"type": "text"
+								},
+								{
+									"key": "director[]",
+									"value": "Alep",
+									"type": "text"
+								},
+								{
+									"key": "language[]",
+									"value": "English",
+									"type": "text"
+								},
+								{
+									"key": "language[]",
+									"value": "Malay",
+									"type": "text"
+								},
+								{
+									"key": "performer[]",
+									"value": "MrAs",
+									"type": "text"
+								},
+								{
+									"key": "performer[]",
+									"value": "Aqil",
+									"type": "text"
+								},
+								{
+									"key": "genre[]",
+									"value": "Action",
+									"type": "text"
+								},
+								{
+									"key": "genre[]",
+									"value": "Thriller",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movie/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Mar 2022 04:16:32 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 26 Mar 2022 04:16:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"New Movie\",\n    \"status\": true,\n    \"message\": \"Sucessfully add new movie\",\n    \"data\": [\n        {\n            \"id\": 27,\n            \"title\": \"MrAs the Movies\",\n            \"description\": \"Work as Software Engineer\",\n            \"mpaa_rating\": \"PG-13\",\n            \"user_id\": null,\n            \"created_at\": \"2022-03-26T04:16:32.000000Z\",\n            \"updated_at\": \"2022-03-26T04:16:32.000000Z\",\n            \"showtimes\": [\n                {\n                    \"id\": 21,\n                    \"time_start\": null,\n                    \"time_end\": null,\n                    \"length\": \"90\",\n                    \"date_from\": \"2022-06-10\",\n                    \"date_to\": \"2022-07-10\",\n                    \"movie_id\": 27,\n                    \"theater_id\": null,\n                    \"created_at\": \"2022-03-26T04:16:32.000000Z\",\n                    \"updated_at\": \"2022-03-26T04:16:32.000000Z\"\n                }\n            ],\n            \"genres\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"Action\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 27,\n                        \"genre_id\": 3\n                    }\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"Thriller\",\n                    \"created_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"updated_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 27,\n                        \"genre_id\": 6\n                    }\n                }\n            ],\n            \"languages\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"English\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 27,\n                        \"language_id\": 1\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"name\": \"Malay\",\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"pivot\": {\n                        \"movie_id\": 27,\n                        \"language_id\": 2\n                    }\n                }\n            ],\n            \"directors\": [\n                {\n                    \"id\": 19,\n                    \"name\": \"Nabil\",\n                    \"created_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"updated_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 27,\n                        \"director_id\": 19\n                    }\n                },\n                {\n                    \"id\": 20,\n                    \"name\": \"Alep\",\n                    \"created_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"updated_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 27,\n                        \"director_id\": 20\n                    }\n                }\n            ],\n            \"performers\": [\n                {\n                    \"id\": 6,\n                    \"name\": \"MrAs\",\n                    \"created_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"updated_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 27,\n                        \"performer_id\": 6\n                    }\n                },\n                {\n                    \"id\": 7,\n                    \"name\": \"Aqil\",\n                    \"created_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"updated_at\": \"2022-03-26T04:13:19.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 27,\n                        \"performer_id\": 7\n                    }\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

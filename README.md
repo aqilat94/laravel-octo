@@ -15,3 +15,4 @@ php artisan migrate --seed
 ### The Sample of Response From Postman
 
 - Check on this link [Movie API Postman collection](https://www.postman.com/collections/c9dee5fc472b8238ea0c)
+- Or find on the file's name Movie API (AQIL).postman_collection.json
